@@ -1,0 +1,5 @@
+server:
+  port: ":8080"
+ipPort: "192.168.201.101:7751"
+dataDir: "D:\\dalian\\model_1"
+serverIpAdr: "/api-json"

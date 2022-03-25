@@ -46,7 +46,8 @@ func ModelData(c echo.Context) error {
 		result["json2"] = serverIpAdr + "/model_2/" + model.Name + ".json"
 		return c.JSON(http.StatusOK, result)
 	}
-	dir := config.GetConfig().GetString("dataDir")
+	//dir := config.GetConfig().GetString("dataDir")
+	dir := "./model_1"
 	files, _ := ioutil.ReadDir(dir)
 	modTime := files[0].ModTime()
 	JsonName := files[0].Name()
@@ -61,7 +62,8 @@ func ModelData(c echo.Context) error {
 }
 
 func NameList(c echo.Context) error {
-	dir := config.GetConfig().GetString("dataDir")
+	//dir := config.GetConfig().GetString("dataDir")
+	dir := "./model_1"
 	files, _ := ioutil.ReadDir(dir)
 	m := make(map[int64]string)
 	keys := make([]int64, len(files))
